@@ -127,11 +127,46 @@ function categorizeValue(value) {
   
   for (var category in mapping) {
     if (mapping[category].test(value)) {
+      // Se for transferência, extrai o nome do destinatário/remetente
+      if (category === "transferencias") {
+        return extractTransferName(value);
+      }
       return category;
     }
   }
   
   return value; // Retorna o valor original se não encontrar categoria
+}
+
+/**
+ * Extrai o nome do destinatário/remetente de transferências
+ */
+function extractTransferName(transferText) {
+  // Padrões para extrair nomes de transferências
+  var patterns = [
+    // Transferência enviada pelo Pix - NOME - CNPJ/CPF
+    /Transferência enviada pelo Pix - ([^-]+) -/i,
+    // Transferência recebida pelo Pix - NOME - CNPJ/CPF  
+    /Transferência recebida pelo Pix - ([^-]+) -/i,
+    // Transferência Recebida - NOME - CNPJ/CPF
+    /Transferência Recebida - ([^-]+) -/i,
+    // Transferência enviada pelo Pix - NOME
+    /Transferência enviada pelo Pix - ([^-]+)$/i,
+    // Transferência recebida pelo Pix - NOME
+    /Transferência recebida pelo Pix - ([^-]+)$/i
+  ];
+  
+  for (var i = 0; i < patterns.length; i++) {
+    var match = transferText.match(patterns[i]);
+    if (match && match[1]) {
+      var name = match[1].trim();
+      // Remove CNPJ/CPF se estiver no nome
+      name = name.replace(/[\d\.\/\-]+/g, '').trim();
+      return name || "transferencia";
+    }
+  }
+  
+  return "transferencia";
 }
 
 /**

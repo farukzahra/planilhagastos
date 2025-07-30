@@ -54,7 +54,7 @@ O script reconhece e categoriza automaticamente:
 | `FLORICULTURA`, `FLORA VIV` | `floricultura` |
 | `VinhosVoVito`, `Vinhos` | `vinhos` |
 | `UNIMED`, `RD SAUDE`, `SAUDE` | `saude` |
-| `Transferência enviada`, `Transferência recebida`, `Transferência Recebida`, `Débito em conta`, `Pagamento de fatura`, `Aplicação RDB`, `Resgate RDB`, `Reembolso recebido` | `transferencias` |
+| `Transferência enviada`, `Transferência recebida`, `Transferência Recebida`, `Débito em conta`, `Pagamento de fatura`, `Aplicação RDB`, `Resgate RDB`, `Reembolso recebido` | `Nome da pessoa/empresa` |
 | `PIX`, `Pix` | `pix` |
 | `StudioDiMiranda`, `PASSOS DE MOCA`, `LONATTO`, `BORTOLAN`, `CURITIBA CABRAL`, `PARADA PEDRO PELANDA`, `PONTO FILE`, `BANCA AVENIDA`, `NBM PONTO DO REAL`, `MKR`, `CURITIBA`, `PEDACINHO DA BAHIA`, `IMIX TACOS MEXICANOS`, `CASA CHINA`, `BANCA AVENIDA ADQ`, `AGROTOPEE PRODUTOS AGR`, `41950640 LUIS HENRIQUE`, `ENCANTOS DO JARDIM`, `RESTAURANTE VO JOAO`, `VinhosVoVito`, `LeonardoLucasDos`, `CURITIBA CABRAL`, `PARADA PEDRO PELANDA 2`, `AGRO 90`, `JENNIFER DO PRADO COR`, `LOJAS RENNER FL 28`, `CAMPOS MATERIAIS DE CO`, `Guloso`, `KA RU`, `FLORICULTURA FLORA VIV`, `SUSHI CHANG RESTAURA`, `AGROTOPEE PRODUTOS AGR`, `AGRO 90`, `NBM PONTO DO REAL`, `SJP COSMETICOS` | `servicos` |
 
@@ -65,6 +65,15 @@ Após o processamento, a planilha terá:
 - **Coluna B**: Valores formatados (vírgula como separador decimal)
 - **Cabeçalhos**: "Categoria" e "Valor"
 - **Formatação**: Cabeçalho em negrito com fundo cinza
+
+## 💸 Funcionalidade especial: Transferências
+
+Para transferências, o script extrai automaticamente o nome do destinatário/remetente:
+
+**Exemplos:**
+- `Transferência enviada pelo Pix - FARUK MUSTAFA ZAHRA - 42.707.259/0001-17` → `FARUK MUSTAFA ZAHRA`
+- `Transferência recebida pelo Pix - Rima Awada Zahra - •••.864.599-••` → `Rima Awada Zahra`
+- `Transferência Recebida - Cassio Augusto Yared - •••.592.489-••` → `Cassio Augusto Yared`
 
 ## ⚠️ Observações
 
