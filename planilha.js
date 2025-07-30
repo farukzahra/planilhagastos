@@ -81,19 +81,29 @@ function categorizeValue(value) {
   }
   
   var mapping = getCategoryMapping();
+  var categoryNames = {
+    "P": "Previsto",
+    "A": "Alimentação", 
+    "F": "Farmácia",
+    "C": "Carteira",
+    "D": "Diversão",
+    "G": "Gasolina",
+    "I": "Investimento",
+    "R": "Rima Gastos"
+  };
   
   for (var category in mapping) {
     if (mapping[category].test(value)) {
       // Se for carteira (transferência), extrai o nome do destinatário/remetente
       if (category === "C") {
         var transferName = extractTransferName(value);
-        return "[C] - " + transferName;
+        return "[" + categoryNames[category] + "] - " + transferName;
       }
-      return "[" + category + "] - " + getSummary(value);
+      return "[" + categoryNames[category] + "] - " + getSummary(value);
     }
   }
   
-  return "[X] - " + getSummary(value); // Retorna categoria "X" (não categorizado) com resumo
+  return "[Não Categorizado] - " + getSummary(value); // Retorna categoria não categorizado com resumo
 }
 
 /**
