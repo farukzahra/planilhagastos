@@ -117,6 +117,9 @@ function getSummary(text) {
   // Remove caracteres especiais e números
   var cleanText = text.replace(/[\d\.\/\-]+/g, '').trim();
   
+  // Remove "Compra no débito" do texto
+  cleanText = cleanText.replace(/Compra no débito/gi, '').trim();
+  
   // Pega as primeiras palavras até 50 caracteres
   var words = cleanText.split(' ').slice(0, 5);
   var summary = words.join(' ').substring(0, 50);
