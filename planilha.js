@@ -55,8 +55,8 @@ function getCategoryMapping() {
     // F - Farmácia (remédio etc.)
     "F": /Raia|farmácia|farmacia|nissei|Nissei|Panvel|CURITIBA|UNIMED|RD SAUDE|SAUDE|SJP COSMETICOS|COSMETICOS/i,
     
-    // C - Carteira (saque)
-    "C": /Transferência enviada|Transferência recebida|Transferência Recebida|Débito em conta|Pagamento de fatura|Aplicação RDB|Resgate RDB|Reembolso recebido|PIX|Pix/i,
+         // C - Transferências (saque)
+     "C": /Transferência enviada|Transferência recebida|Transferência Recebida|Débito em conta|Pagamento de fatura|Aplicação RDB|Resgate RDB|Reembolso recebido|PIX|Pix/i,
     
     // D - Diversão (passeios)
     "D": /RENNER|EFATA LOJAS DE DEPARTA|LOJAS AMERICANAS|VULCABRAS|ARTIGOS ESPORTIVOS|PET MARC|PET|FLORICULTURA|FLORA VIV|VinhosVoVito|Vinhos|Estacionamento|ALLPARK|CITY PARK/i,
@@ -85,7 +85,7 @@ function categorizeValue(value) {
     "P": "Previsto",
     "A": "Alimentação", 
     "F": "Farmácia",
-    "C": "Carteira",
+    "C": "Transferências",
     "D": "Diversão",
     "G": "Gasolina",
     "I": "Investimento",
@@ -94,7 +94,7 @@ function categorizeValue(value) {
   
   for (var category in mapping) {
     if (mapping[category].test(value)) {
-      // Se for carteira (transferência), extrai o nome do destinatário/remetente
+      // Se for transferência, extrai o nome do destinatário/remetente
       if (category === "C") {
         var transferName = extractTransferName(value);
         return "[" + categoryNames[category] + "] - " + transferName;
