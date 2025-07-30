@@ -129,13 +129,32 @@ function categorizeValue(value) {
     if (mapping[category].test(value)) {
       // Se for transferência, extrai o nome do destinatário/remetente
       if (category === "transferencias") {
-        return extractTransferName(value);
+        var transferName = extractTransferName(value);
+        return "[transferencia] - " + transferName;
       }
-      return category;
+      return "[" + category + "] - " + getSummary(value);
     }
   }
   
-  return value; // Retorna o valor original se não encontrar categoria
+  return "[outros] - " + getSummary(value); // Retorna categoria "outros" com resumo
+}
+
+/**
+ * Cria um resumo do texto original
+ */
+function getSummary(text) {
+  if (!text || text.length <= 50) {
+    return text;
+  }
+  
+  // Remove caracteres especiais e números
+  var cleanText = text.replace(/[\d\.\/\-]+/g, '').trim();
+  
+  // Pega as primeiras palavras até 50 caracteres
+  var words = cleanText.split(' ').slice(0, 5);
+  var summary = words.join(' ').substring(0, 50);
+  
+  return summary + (summary.length >= 50 ? '...' : '');
 }
 
 /**

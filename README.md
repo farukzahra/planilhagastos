@@ -61,7 +61,7 @@ O script reconhece e categoriza automaticamente:
 ## 📈 Resultado
 
 Após o processamento, a planilha terá:
-- **Coluna A**: Categorias padronizadas
+- **Coluna A**: Categorias no formato `[categoria] - resumo`
 - **Coluna B**: Valores formatados (vírgula como separador decimal)
 - **Cabeçalhos**: "Categoria" e "Valor"
 - **Formatação**: Cabeçalho em negrito com fundo cinza
@@ -71,9 +71,20 @@ Após o processamento, a planilha terá:
 Para transferências, o script extrai automaticamente o nome do destinatário/remetente:
 
 **Exemplos:**
-- `Transferência enviada pelo Pix - FARUK MUSTAFA ZAHRA - 42.707.259/0001-17` → `FARUK MUSTAFA ZAHRA`
-- `Transferência recebida pelo Pix - Rima Awada Zahra - •••.864.599-••` → `Rima Awada Zahra`
-- `Transferência Recebida - Cassio Augusto Yared - •••.592.489-••` → `Cassio Augusto Yared`
+- `Transferência enviada pelo Pix - FARUK MUSTAFA ZAHRA - 42.707.259/0001-17` → `[transferencia] - FARUK MUSTAFA ZAHRA`
+- `Transferência recebida pelo Pix - Rima Awada Zahra - •••.864.599-••` → `[transferencia] - Rima Awada Zahra`
+- `Transferência Recebida - Cassio Augusto Yared - •••.592.489-••` → `[transferencia] - Cassio Augusto Yared`
+
+## 📝 Formato das categorias
+
+O script agora gera categorias no formato `[categoria] - resumo`:
+
+**Exemplos:**
+- `Compra no débito - POPEYES` → `[popeyes pao] - Compra no débito POPEYES`
+- `Compra no débito - JACOMAR` → `[mercado jacomar] - Compra no débito JACOMAR`
+- `Compra no débito - LOJAS RENNER` → `[vestuario] - Compra no débito LOJAS RENNER`
+- `Compra no débito - RESTAURANTE ABC` → `[restaurante] - Compra no débito RESTAURANTE ABC`
+- `Compra no débito - LOJA DESCONHECIDA` → `[outros] - Compra no débito LOJA DESCONHECIDA`
 
 ## ⚠️ Observações
 
