@@ -1,0 +1,35 @@
+# Arquivos de histórico do VS Code
+.history/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários
+*.tmp
+*.temp
+*~
+
+# Logs
+*.log
+
+# Arquivos de IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Arquivos de backup
+*.bak
+*.backup
+
+# Arquivos de configuração local
+.env
+.env.local
+
+# Node modules (se houver)
+node_modules/
+
+# Arquivos de build
+dist/
+build/ 
