@@ -42,76 +42,33 @@ function validateData(data) {
 }
 
 /**
- * Mapeamento de categorias para facilitar manutenção
+ * Mapeamento de categorias padronizadas
  */
 function getCategoryMapping() {
   return {
-    // Padrões para "cruz"
-    "cruz": /cruz|CRUZ|Cruz/i,
+    // P - Previsto
+    "P": /previsto|PREVISTO/i,
     
-    // Padrões para "gasolina" 
-    "gasolina": /posto|Posto|POSTO/i,
+    // A - Alimentação
+    "A": /cruz|CRUZ|Cruz|RESTAURANTE|PIZZARIA|ESFIHARIA|SUSHI|TACOS|MEXICANOS|BAHIA|LANCHES|COME COME|GULOSO|ENCANTOS DO JARDIM|VO JOAO|BORTOLAN|CAFE DOCELANDIA|PEDACINHO DA BAHIA|IMIX TACOS MEXICANOS|CASA CHINA|RESTAURANTE VO JOAO|POPEYES|PAO|Casadepaobethelem|PADARIA|Burger King|BURGER|pastel pao|Josiane da Silva Bloc|Jacomar|Festval|FESTVAL|SUPERMERCADO HELLEN|TUCUPI SUPERMERCADOS|armazem|ARMAZEM|Condor|SUPERMERCADO HELLEN/i,
     
-    // Padrões para "diarista"
-    "diarista": /Adriana Aparecida Cardoso/i,
+    // F - Farmácia (remédio etc.)
+    "F": /Raia|farmácia|farmacia|nissei|Nissei|Panvel|CURITIBA|UNIMED|RD SAUDE|SAUDE|SJP COSMETICOS|COSMETICOS/i,
     
-    // Padrões para "farmácia"
-    "farmácia": /Raia|farmácia|farmacia|nissei|Nissei|Panvel|CURITIBA/i,
+    // C - Carteira (saque)
+    "C": /Transferência enviada|Transferência recebida|Transferência Recebida|Débito em conta|Pagamento de fatura|Aplicação RDB|Resgate RDB|Reembolso recebido|PIX|Pix/i,
     
-    // Padrões para "pastel pao"
-    "pastel pao": /Josiane da Silva Bloc/i,
+    // D - Diversão (passeios)
+    "D": /RENNER|EFATA LOJAS DE DEPARTA|LOJAS AMERICANAS|VULCABRAS|ARTIGOS ESPORTIVOS|PET MARC|PET|FLORICULTURA|FLORA VIV|VinhosVoVito|Vinhos|Estacionamento|ALLPARK|CITY PARK/i,
     
-    // Padrões para "mercado jacomar"
-    "mercado jacomar": /Jacomar/i,
+    // G - Gasolina
+    "G": /posto|Posto|POSTO/i,
     
-    // Padrões para "popeyes pao"
-    "popeyes pao": /POPEYES/i,
+    // I - Investimento
+    "I": /Aplicação RDB|Resgate RDB/i,
     
-    // Padrões para "pao"
-    "pao": /PAO|Casadepaobethelem|PADARIA|PADARIA/i,
-    
-    // Padrões para "burger pao"
-    "burger pao": /Burger King|BURGER/i,
-    
-    // Padrões para "estacionamento"
-    "estacionamento": /Estacionamento|ALLPARK|CITY PARK/i,
-    
-    // Padrões para "mercado Festval"
-    "mercado Festval": /Festval|FESTVAL|SUPERMERCADO HELLEN|TUCUPI SUPERMERCADOS/i,
-    
-    // Padrões para "mercado Armazem"
-    "mercado Armazem": /armazem|ARMAZEM/i,
-    
-    // Padrões para "mercado Condor"
-    "mercado Condor": /Condor|SUPERMERCADO HELLEN/i,
-    
-    // Padrões para "escola"
-    "escola": /REGIAO ADM SUL|Associacao de Pais e Mestres/i,
-    
-    // Novos padrões identificados
-    "restaurante": /RESTAURANTE|PIZZARIA|ESFIHARIA|SUSHI|TACOS|MEXICANOS|BAHIA|LANCHES|COME COME|GULOSO|ENCANTOS DO JARDIM|VO JOAO|BORTOLAN|CAFE DOCELANDIA|PEDACINHO DA BAHIA|IMIX TACOS MEXICANOS|CASA CHINA|RESTAURANTE VO JOAO/i,
-    
-    "vestuario": /RENNER|EFATA LOJAS DE DEPARTA|LOJAS AMERICANAS|VULCABRAS|ARTIGOS ESPORTIVOS/i,
-    
-    "cosmeticos": /SJP COSMETICOS|COSMETICOS/i,
-    
-    "pet": /PET MARC|PET/i,
-    
-    "agropecuaria": /AGROTOPEE|AGRO 90|PRODUTOS AGR/i,
-    
-    "materiais": /CAMPOS MATERIAIS DE CO|MATERIAIS/i,
-    
-    "floricultura": /FLORICULTURA|FLORA VIV/i,
-    
-    "vinhos": /VinhosVoVito|Vinhos/i,
-    
-    "saude": /UNIMED|RD SAUDE|SAUDE/i,
-    
-    "transferencias": /Transferência enviada|Transferência recebida|Transferência Recebida|Débito em conta|Pagamento de fatura|Aplicação RDB|Resgate RDB|Reembolso recebido/i,
-    
-    "pix": /PIX|Pix/i,
-    
-    "servicos": /StudioDiMiranda|PASSOS DE MOCA|LONATTO|BORTOLAN|CURITIBA CABRAL|PARADA PEDRO PELANDA|PONTO FILE|BANCA AVENIDA|NBM PONTO DO REAL|MKR|LONATTO|CURITIBA|PEDACINHO DA BAHIA|IMIX TACOS MEXICANOS|CASA CHINA|BANCA AVENIDA ADQ|AGROTOPEE PRODUTOS AGR|MKR|LONATTO|41950640 LUIS HENRIQUE|ENCANTOS DO JARDIM|RESTAURANTE VO JOAO|BORTOLAN|VinhosVoVito|LeonardoLucasDos|CURITIBA CABRAL|PARADA PEDRO PELANDA 2|AGRO 90|JENNIFER DO PRADO COR|LOJAS RENNER FL 28|CAMPOS MATERIAIS DE CO|Guloso|CAMPOS MATERIAIS DE CO|KA RU|FLORICULTURA FLORA VIV|SUSHI CHANG RESTAURA|CAMPOS MATERIAIS DE CO|AGROTOPEE PRODUTOS AGR|AGRO 90|NBM PONTO DO REAL|SJP COSMETICOS/i
+    // R - Rima Gastos
+    "R": /Rima Awada Zahra|RIMA/i
   };
 }
 
@@ -127,16 +84,16 @@ function categorizeValue(value) {
   
   for (var category in mapping) {
     if (mapping[category].test(value)) {
-      // Se for transferência, extrai o nome do destinatário/remetente
-      if (category === "transferencias") {
+      // Se for carteira (transferência), extrai o nome do destinatário/remetente
+      if (category === "C") {
         var transferName = extractTransferName(value);
-        return "[transferencia] - " + transferName;
+        return "[C] - " + transferName;
       }
       return "[" + category + "] - " + getSummary(value);
     }
   }
   
-  return "[outros] - " + getSummary(value); // Retorna categoria "outros" com resumo
+  return "[X] - " + getSummary(value); // Retorna categoria "X" (não categorizado) com resumo
 }
 
 /**
