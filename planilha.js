@@ -56,7 +56,7 @@ function getCategoryMapping() {
     "diarista": /Adriana Aparecida Cardoso/i,
     
     // Padrões para "farmácia"
-    "farmácia": /Raia|farmácia|farmacia|nissei|Nissei|Panvel/i,
+    "farmácia": /Raia|farmácia|farmacia|nissei|Nissei|Panvel|CURITIBA/i,
     
     // Padrões para "pastel pao"
     "pastel pao": /Josiane da Silva Bloc/i,
@@ -68,25 +68,50 @@ function getCategoryMapping() {
     "popeyes pao": /POPEYES/i,
     
     // Padrões para "pao"
-    "pao": /PAO|Casadepaobethelem/i,
+    "pao": /PAO|Casadepaobethelem|PADARIA|PADARIA/i,
     
     // Padrões para "burger pao"
     "burger pao": /Burger King|BURGER/i,
     
     // Padrões para "estacionamento"
-    "estacionamento": /Estacionamento/i,
+    "estacionamento": /Estacionamento|ALLPARK|CITY PARK/i,
     
     // Padrões para "mercado Festval"
-    "mercado Festval": /Festval|FESTVAL/i,
+    "mercado Festval": /Festval|FESTVAL|SUPERMERCADO HELLEN|TUCUPI SUPERMERCADOS/i,
     
     // Padrões para "mercado Armazem"
     "mercado Armazem": /armazem|ARMAZEM/i,
     
     // Padrões para "mercado Condor"
-    "mercado Condor": /Condor/i,
+    "mercado Condor": /Condor|SUPERMERCADO HELLEN/i,
     
     // Padrões para "escola"
-    "escola": /REGIAO ADM SUL/i
+    "escola": /REGIAO ADM SUL|Associacao de Pais e Mestres/i,
+    
+    // Novos padrões identificados
+    "restaurante": /RESTAURANTE|PIZZARIA|ESFIHARIA|SUSHI|TACOS|MEXICANOS|BAHIA|LANCHES|COME COME|GULOSO|ENCANTOS DO JARDIM|VO JOAO|BORTOLAN|CAFE DOCELANDIA|PEDACINHO DA BAHIA|IMIX TACOS MEXICANOS|CASA CHINA|RESTAURANTE VO JOAO/i,
+    
+    "vestuario": /RENNER|EFATA LOJAS DE DEPARTA|LOJAS AMERICANAS|VULCABRAS|ARTIGOS ESPORTIVOS/i,
+    
+    "cosmeticos": /SJP COSMETICOS|COSMETICOS/i,
+    
+    "pet": /PET MARC|PET/i,
+    
+    "agropecuaria": /AGROTOPEE|AGRO 90|PRODUTOS AGR/i,
+    
+    "materiais": /CAMPOS MATERIAIS DE CO|MATERIAIS/i,
+    
+    "floricultura": /FLORICULTURA|FLORA VIV/i,
+    
+    "vinhos": /VinhosVoVito|Vinhos/i,
+    
+    "saude": /UNIMED|RD SAUDE|SAUDE/i,
+    
+    "transferencias": /Transferência enviada|Transferência recebida|Transferência Recebida|Débito em conta|Pagamento de fatura|Aplicação RDB|Resgate RDB|Reembolso recebido/i,
+    
+    "pix": /PIX|Pix/i,
+    
+    "servicos": /StudioDiMiranda|PASSOS DE MOCA|LONATTO|BORTOLAN|CURITIBA CABRAL|PARADA PEDRO PELANDA|PONTO FILE|BANCA AVENIDA|NBM PONTO DO REAL|MKR|LONATTO|CURITIBA|PEDACINHO DA BAHIA|IMIX TACOS MEXICANOS|CASA CHINA|BANCA AVENIDA ADQ|AGROTOPEE PRODUTOS AGR|MKR|LONATTO|41950640 LUIS HENRIQUE|ENCANTOS DO JARDIM|RESTAURANTE VO JOAO|BORTOLAN|VinhosVoVito|LeonardoLucasDos|CURITIBA CABRAL|PARADA PEDRO PELANDA 2|AGRO 90|JENNIFER DO PRADO COR|LOJAS RENNER FL 28|CAMPOS MATERIAIS DE CO|Guloso|CAMPOS MATERIAIS DE CO|KA RU|FLORICULTURA FLORA VIV|SUSHI CHANG RESTAURA|CAMPOS MATERIAIS DE CO|AGROTOPEE PRODUTOS AGR|AGRO 90|NBM PONTO DO REAL|SJP COSMETICOS/i
   };
 }
 

@@ -44,7 +44,19 @@ O script reconhece e categoriza automaticamente:
 | `Festval`, `FESTVAL` | `mercado Festval` |
 | `armazem`, `ARMAZEM` | `mercado Armazem` |
 | `Condor` | `mercado Condor` |
-| `REGIAO ADM SUL` | `escola` |
+| `REGIAO ADM SUL`, `Associacao de Pais e Mestres` | `escola` |
+| `RESTAURANTE`, `PIZZARIA`, `ESFIHARIA`, `SUSHI`, `TACOS`, `MEXICANOS`, `BAHIA`, `LANCHES`, `COME COME`, `GULOSO`, `ENCANTOS DO JARDIM`, `VO JOAO`, `BORTOLAN`, `CAFE DOCELANDIA`, `PEDACINHO DA BAHIA`, `IMIX TACOS MEXICANOS`, `CASA CHINA`, `RESTAURANTE VO JOAO` | `restaurante` |
+| `RENNER`, `EFATA LOJAS DE DEPARTA`, `LOJAS AMERICANAS`, `VULCABRAS`, `ARTIGOS ESPORTIVOS` | `vestuario` |
+| `SJP COSMETICOS`, `COSMETICOS` | `cosmeticos` |
+| `PET MARC`, `PET` | `pet` |
+| `AGROTOPEE`, `AGRO 90`, `PRODUTOS AGR` | `agropecuaria` |
+| `CAMPOS MATERIAIS DE CO`, `MATERIAIS` | `materiais` |
+| `FLORICULTURA`, `FLORA VIV` | `floricultura` |
+| `VinhosVoVito`, `Vinhos` | `vinhos` |
+| `UNIMED`, `RD SAUDE`, `SAUDE` | `saude` |
+| `Transferência enviada`, `Transferência recebida`, `Transferência Recebida`, `Débito em conta`, `Pagamento de fatura`, `Aplicação RDB`, `Resgate RDB`, `Reembolso recebido` | `transferencias` |
+| `PIX`, `Pix` | `pix` |
+| `StudioDiMiranda`, `PASSOS DE MOCA`, `LONATTO`, `BORTOLAN`, `CURITIBA CABRAL`, `PARADA PEDRO PELANDA`, `PONTO FILE`, `BANCA AVENIDA`, `NBM PONTO DO REAL`, `MKR`, `CURITIBA`, `PEDACINHO DA BAHIA`, `IMIX TACOS MEXICANOS`, `CASA CHINA`, `BANCA AVENIDA ADQ`, `AGROTOPEE PRODUTOS AGR`, `41950640 LUIS HENRIQUE`, `ENCANTOS DO JARDIM`, `RESTAURANTE VO JOAO`, `VinhosVoVito`, `LeonardoLucasDos`, `CURITIBA CABRAL`, `PARADA PEDRO PELANDA 2`, `AGRO 90`, `JENNIFER DO PRADO COR`, `LOJAS RENNER FL 28`, `CAMPOS MATERIAIS DE CO`, `Guloso`, `KA RU`, `FLORICULTURA FLORA VIV`, `SUSHI CHANG RESTAURA`, `AGROTOPEE PRODUTOS AGR`, `AGRO 90`, `NBM PONTO DO REAL`, `SJP COSMETICOS` | `servicos` |
 
 ## 📈 Resultado
 
