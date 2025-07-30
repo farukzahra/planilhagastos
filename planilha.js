@@ -110,15 +110,20 @@ function categorizeValue(value) {
  * Cria um resumo do texto original
  */
 function getSummary(text) {
-  if (!text || text.length <= 50) {
+  if (!text) {
     return text;
   }
   
-  // Remove caracteres especiais e números
-  var cleanText = text.replace(/[\d\.\/\-]+/g, '').trim();
+  // Remove "Compra no débito" do texto primeiro
+  var cleanText = text.replace(/Compra no débito/gi, '').trim();
   
-  // Remove "Compra no débito" do texto
-  cleanText = cleanText.replace(/Compra no débito/gi, '').trim();
+  // Remove caracteres especiais e números
+  cleanText = cleanText.replace(/[\d\.\/\-]+/g, '').trim();
+  
+  // Se o texto limpo for menor ou igual a 50 caracteres, retorna ele
+  if (cleanText.length <= 50) {
+    return cleanText;
+  }
   
   // Pega as primeiras palavras até 50 caracteres
   var words = cleanText.split(' ').slice(0, 5);
